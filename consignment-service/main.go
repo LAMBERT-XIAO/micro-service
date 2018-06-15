@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"google.golang.org/grpc"
+	"github.com/micro/go-micro"
 	"log"
 	"net"
 	pb "shippy/proto/consignment"
@@ -48,6 +48,9 @@ func (s *service) CreateConsignment(ctx context.Context, req *pb.Consignment) (*
 
 	resp := &pb.Response{Created: true, Consignment: consignment}
 	return resp, nil
+}
+
+func main() {
 }
 
 func main() {
