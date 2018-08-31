@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package micro.account;
+option go_package  = "account";
+
+message ChannelDetailRequest {
+    string channelId = 1;
+}
+
+message ChannelDetailResponse {
+    string channelId = 1;
+    string name = 2;
+    string origin = 3;
+}
